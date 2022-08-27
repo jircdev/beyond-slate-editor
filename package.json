@@ -1,0 +1,11 @@
+{
+  "name": "beyond-slate-editor",
+  "version": "0.0.1",
+  "description": "Slate Editor implementation in BeyondJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@jircdeveloper",
+  "license": "ISC"
+}
