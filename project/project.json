@@ -1,7 +1,7 @@
 {
   "version": 1,
   "scope": "jircdev",
-  "name": "editor",
+  "name": "beyond-slate-editor",
   "title": "Rich Editor",
   "template": "template/template.json",
   "languages": {
@@ -33,9 +33,7 @@
           "@beyond-js/kernel": "web",
           "@beyond-js/backend": "web",
           "@beyond-js/widgets": "web",
-          "@beyond-js/react-widgets": "web",
-          "@beyond-js/svelte-widgets": "web",
-          "@beyond-js/vue-widgets": "web"
+          "@beyond-js/react-widgets": "web"
         }
       },
       {
@@ -53,9 +51,7 @@
           "@beyond-js/kernel": "web",
           "@beyond-js/backend": "web",
           "@beyond-js/widgets": "web",
-          "@beyond-js/react-widgets": "web",
-          "@beyond-js/svelte-widgets": "web",
-          "@beyond-js/vue-widgets": "web"
+          "@beyond-js/react-widgets": "web"
         }
       },
       {
@@ -73,9 +69,7 @@
           "@beyond-js/kernel": "web",
           "@beyond-js/backend": "web",
           "@beyond-js/widgets": "web",
-          "@beyond-js/react-widgets": "web",
-          "@beyond-js/svelte-widgets": "web",
-          "@beyond-js/vue-widgets": "web"
+          "@beyond-js/react-widgets": "web"
         }
       },
       {
@@ -92,9 +86,7 @@
         "@beyond-js/kernel": "web",
         "@beyond-js/backend": "web",
         "@beyond-js/widgets": "web",
-        "@beyond-js/react-widgets": "web",
-        "@beyond-js/svelte-widgets": "web",
-        "@beyond-js/vue-widgets": "web"
+        "@beyond-js/react-widgets": "web"
       }
       }
     ]
@@ -105,9 +97,7 @@
       "@beyond-js/kernel",
       "@beyond-js/backend",
       "@beyond-js/widgets",
-      "@beyond-js/react-widgets",
-      "@beyond-js/vue-widgets",
-      "@beyond-js/svelte-widgets"
+      "@beyond-js/react-widgets"
     ]
   }
 }

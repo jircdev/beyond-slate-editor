@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "@jircdeveloper",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "slate": "^0.82.1",
+    "slate-react": "^0.82.1",
+    "socket.io": "^4.3.1",
+    "socket.io-client": "^4.4.1"
+  }
 }
