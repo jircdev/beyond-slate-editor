@@ -2,7 +2,7 @@ import {Editable, Slate, withReact} from "slate-react";
 import * as React from "react";
 import {createEditor, Descendant} from "slate";
 import {useCallback, useState} from "react";
-import {serialize} from "./serialize";
+import {serialize} from "../utils/serialize";
 
 export function TitleEditor() {
 

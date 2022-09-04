@@ -1,5 +1,5 @@
 import * as React from "react";
 
-export const DefaultElement = props => {
+export const Paragraph = props => {
     return <p {...props.attributes}>{props.children}</p>
 }

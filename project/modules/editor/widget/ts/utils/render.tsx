@@ -1,13 +1,13 @@
-import {CodeBlock} from "../components/code-block";
-import {Image} from "../components/image";
-import {DefaultElement} from "../components/default";
+import {CodeBlock} from "../editor-components/code";
+import {Image} from "../editor-components/image";
+import {Paragraph} from "../editor-components/paragraph";
 import * as React from "react";
-import {Leaf} from "../components/leaf";
-import {Link} from "../components/link";
+import {Leaf} from "../editor-components/leaf";
+import {Link} from "../editor-components/link";
 
 export function onRenderElement(props) {
 
-    console.log(400, props.element.type)
+    // console.log(400, props.element.type)
     switch (props.element.type) {
         case 'code':
             return <CodeBlock {...props} />
@@ -16,7 +16,7 @@ export function onRenderElement(props) {
         case 'link':
             return <Link {...props}/>
         default:
-            return <DefaultElement {...props} />
+            return <Paragraph {...props} />
     }
 
 
