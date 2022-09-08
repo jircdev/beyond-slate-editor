@@ -1,11 +1,6 @@
-import { ReactEditor } from "slate-react";
-import {Editor, Path, Range, Transforms, Element} from "slate";
+import {Editor, Transforms, Element} from "slate";
+import { createParagraphNode } from './add-paragraph';
 
-// Just create a paragraph element.
-export const createParagraphNode = (children: any[] = [{text: " "}]) => ({
-    type: "paragraph",
-    children
-});
 
 // Just create a link element.
 export const createLinkNode = (href: string, text: string) => ({

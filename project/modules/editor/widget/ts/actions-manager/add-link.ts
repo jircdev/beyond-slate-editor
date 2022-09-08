@@ -6,7 +6,7 @@ export const addLink = (editor) => {
     const selectedText = Editor.string(editor, selection);
     const isSelectedTextEmpty = selectedText === '';
 
-    if (!selection || isSelectedTextEmpty) return;
+    if (isSelectedTextEmpty) return;
 
     const url = prompt('Insert a url');
     insertLink(editor, url, selectedText);

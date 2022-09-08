@@ -19,6 +19,7 @@ function HeaderEditor() {
             <Option
                 dataAction="image"
                 name="Image"
+                needAFile={true}
             />
 
             <Option

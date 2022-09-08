@@ -16,3 +16,17 @@
 .block {
   display: block;
 }
+
+.file-input {
+  display: none;
+}
+
+img {
+  width: 50%;
+  aspect-ratio: 16/9;
+}
+
+pre {
+  background: var(--gray-darker);
+  padding: .5rem; 
+}
