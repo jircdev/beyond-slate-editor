@@ -3,11 +3,11 @@ import { BaseEditor, Descendant, Editor } from 'slate';
 import { Editable, ReactEditor, Slate } from "slate-react";
 import { useEditorContext } from '../contexts/EditorContext';
 import { isHotkey } from '../utils/hotkeys';
-import { onReanderLeaf, onRenderElement } from '../utils/render';
+import { onReanderLeaf, onRenderElement } from './render';
 import { serialize } from '../utils/serialize';
 
-type CustomElement = { type: 'paragraph'; children: [{ text: '' }] }
-type CustomText = { text: string }
+type CustomElement = { type: 'paragraph'; children: [{ text: '' }] };
+type CustomText = { text: string };
 
 declare module 'slate' {
     interface CustomTypes {
@@ -15,7 +15,7 @@ declare module 'slate' {
         Element: CustomElement
         Text: CustomText
     }
-}
+};
 
 const HOTKEYS = {
     'mod+b': 'bold',
@@ -23,13 +23,13 @@ const HOTKEYS = {
     'mod+u': 'underline',
     'mod+`': 'code',
     'mod+shift': 'inlineCode',
-}
+};
 
 export
 function TextEditor(): JSX.Element {
     const { editor } = useEditorContext();
 
-    const content = JSON.parse(localStorage.getItem('content')) || [
+    const content = JSON.parse(localStorage.getItem('__content')) || [
         {
             type: 'paragraph',
             children: [{text: 'A line of text in a paragraph.'}],
@@ -41,9 +41,7 @@ function TextEditor(): JSX.Element {
 
     const onChange = newValue => {
         const isAstChange = editor.operations.some(
-            op => {
-                return 'set_selection' !== op.type
-            }
+            operation => 'set_selection' !== operation.type
         )
         if (isAstChange) {
             // Save the value to Local Storage.

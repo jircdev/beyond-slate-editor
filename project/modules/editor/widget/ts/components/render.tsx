@@ -15,6 +15,8 @@ export function onRenderElement(props) {
             return <Image {...props}/>
         case 'link':
             return <Link {...props}/>
+        // case 'external-link'
+        //     return <ExternalLink />
         default:
             return <Paragraph {...props} />
     }

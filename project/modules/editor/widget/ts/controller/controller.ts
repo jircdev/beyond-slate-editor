@@ -1,5 +1,5 @@
 import {PageReactWidgetController} from '@beyond-js/react-widgets/page';
-import {Widget} from '../page';
+import {Widget} from '../';
 
 export /*bundle*/
 class Controller extends PageReactWidgetController {
