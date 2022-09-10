@@ -2,8 +2,6 @@ import { loadImage } from "../actions/load-image";
 
 export const addImage = (editor, file) => {
     file.current.click();
-    console.log('ME EJECUTO WEY')
-
     const imageFile = file.current.files[0];
     if (!imageFile) return;
 

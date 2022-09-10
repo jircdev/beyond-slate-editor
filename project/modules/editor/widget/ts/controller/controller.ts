@@ -13,8 +13,4 @@ class Controller extends PageReactWidgetController {
         return Widget;
     }
 
-    show(){
-        console.log('ready')
-    }
-
 }

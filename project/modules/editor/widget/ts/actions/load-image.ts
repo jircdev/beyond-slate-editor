@@ -9,21 +9,21 @@ const createImageNode = (alt, src) => ({
     children: [{text: ""}]
 });
 
-export function loadImage(editor, url) {
+export function loadImage(editor, src) {
     const {selection} = editor;
-    const image = createImageNode("Image", url);
+    const image = createImageNode("Image", src);
     ReactEditor.focus(editor);
     
-
     const [, parentPath] = Editor.parent(
         editor,
         selection.focus?.path
     );
 
     Transforms.insertNodes(editor, image, {
-        at: Path.next(parentPath),
-        voids: 1
+        at: Path.next(parentPath)
     });
 
-    Transforms.insertNodes(editor, createParagraphNode(), { at: Path.next(), select: true });
+    const imageLocation = Editor.end(editor, Path.next(parentPath));
+
+    Transforms.insertNodes(editor, createParagraphNode(), { at: imageLocation, select: true });
 }

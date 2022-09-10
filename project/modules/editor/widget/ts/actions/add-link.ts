@@ -12,7 +12,6 @@ export const createLinkNode = (href: string, text: string) => ({
 // Create a link and put it in the document
 export function insertLink(editor, href: string, label: string) {
     const { selection } = editor;
-
     
     // Convierte el texto seleccionado en un link usando la url pasada y el texto en si como label
     Editor.insertNode(editor, createLinkNode(href, label));

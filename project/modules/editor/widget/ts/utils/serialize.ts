@@ -19,10 +19,16 @@ export const serialize = nodes => {
         switch (node.type) {
             case 'quote':
                 return `<blockquote><p>${children}</p></blockquote>`;
+
             case 'paragraph':
                 return `<p>${children}</p>`;
+
             case 'link':
-                return `<a href="${escapeHtml(node.url)}">${children}</a>`;
+                return `<a href="${escapeHtml(node.href)}">${children}</a>`;
+
+            case 'img':
+                return `<img src={${node.src}} alt={} />`
+                
             default:
                 return children;
         }
