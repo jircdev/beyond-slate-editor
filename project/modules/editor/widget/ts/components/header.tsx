@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Option } from "./option";
+import { SaveButton } from "./save-button";
 
 export 
 function HeaderEditor() {
@@ -26,6 +27,8 @@ function HeaderEditor() {
                 dataAction="link"
                 name="Link"
             />
+
+            <SaveButton />
         </header>
     );
 }

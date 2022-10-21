@@ -37,38 +37,39 @@ function TextEditor(): JSX.Element {
     ]
 
     const initialValue: Descendant[] = content;
-    const [value, setValue] = useState<Descendant[]>(initialValue)
+    const [value, setValue] = useState<Descendant[]>(initialValue);
 
     const onChange = newValue => {
         const isAstChange = editor.operations.some(
             operation => 'set_selection' !== operation.type
         )
         if (isAstChange) {
+            console.log(value)
             // Save the value to Local Storage.
             console.log(serialize(value));
-            const content = JSON.stringify(value)
-            localStorage.setItem('__content', content)
+            const content = JSON.stringify(value);
+            localStorage.setItem('__content', content);
         }
 
         setValue(newValue);
     }
 
     const isMarkActive = (editor, format) => {
-        const marks = Editor.marks(editor)
-        return marks ? marks[format] === true : false
+        const marks = Editor.marks(editor);
+        return marks ? marks[format] === true : false;
     }
 
     const toggleMark = (editor, format) => {
-        const isActive = isMarkActive(editor, format)
-        if (isActive) Editor.removeMark(editor, format)
-        else Editor.addMark(editor, format, true)
+        const isActive = isMarkActive(editor, format);
+        if (isActive) Editor.removeMark(editor, format);
+        else Editor.addMark(editor, format, true);
     }
 
     
 
-    const renderElement = useCallback(onRenderElement, [])
+    const renderElement = useCallback(onRenderElement, []);
     // Define a leaf rendering function that is memoized with `useCallback`.
-    const renderLeaf = useCallback(onReanderLeaf, [])
+    const renderLeaf = useCallback(onReanderLeaf, []);
 
 
     const onKeyDown = event => {

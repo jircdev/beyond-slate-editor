@@ -1,5 +1,5 @@
 import {escapeHtml} from './escape-html';
-import {Text, BaseEditor, Editor, Descendant, Transforms} from 'slate'
+import {Text} from 'slate'
 
 export const serialize = nodes => {
 
@@ -15,7 +15,6 @@ export const serialize = nodes => {
         }
 
         const children = node.children.map(n => serialize(n)).join('');
-
         switch (node.type) {
             case 'quote':
                 return `<blockquote><p>${children}</p></blockquote>`;
@@ -27,7 +26,10 @@ export const serialize = nodes => {
                 return `<a href="${escapeHtml(node.href)}">${children}</a>`;
 
             case 'img':
-                return `<img src={${node.src}} alt={} />`
+                return `<img src={${node.src}} alt={} />`;
+
+            case 'code':
+                return `<pre><code>${children}</code></pre>`
                 
             default:
                 return children;

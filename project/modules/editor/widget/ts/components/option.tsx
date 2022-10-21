@@ -48,7 +48,6 @@ function Option({ dataAction, name, needAFile }: Props): JSX.Element {
                         className="file-input" 
                         ref={fileRef} 
                 />
-
             }
         </>
     )
