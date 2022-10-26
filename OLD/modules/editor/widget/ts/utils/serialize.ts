@@ -1,4 +1,4 @@
-import {escapeHtml} from './escape-html';
+import {escapeHtml} from '../../../../../../beyond-slate-editor/modules/home/ts/views/utils/escape-html';
 import {Text} from 'slate'
 
 export const serialize = nodes => {

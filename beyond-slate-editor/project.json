@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "scope": "community",
+  "name": "beyond-slate-editor",
+  "title": "Beyond Slate Editor",
+  "layout": "main-layout",
+  "template": "template/template.json",
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en",
+      "es"
+    ]
+  },
+  "params": {},
+  "modules": {
+    "path": "./modules",
+    "externals": {}
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "web",
+        "platform": "web",
+        "environment": "development",
+        "port": 3001,
+        "default": true
+      }
+    ]
+  }
+}

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { addLink } from '../actions-manager/add-link';
-import { addImage } from '../actions-manager/load-image';
-import { toggleBoldMark } from '../actions/set-bold';
 import { toggleCodeBlock } from '../actions/set-code';
-import { useEditorContext } from '../contexts/EditorContext';
+import { toggleBoldMark } from '../actions/set-bold';
+import { useEditorContext } from '../context';
+import { addImage } from '../actions-manager/load-image';
+
 
 const ACTIONS = {
     link: addLink,
@@ -25,6 +26,7 @@ function Option({ dataAction, name, needAFile }: Props): JSX.Element {
 
     const actionManager = (event) => {
         const { selection } = editor;
+        console.log(1, editor)
         if (!selection) return;
 
         ACTIONS[dataAction](editor, fileRef);
@@ -33,6 +35,7 @@ function Option({ dataAction, name, needAFile }: Props): JSX.Element {
     return (
         <>
             <button
+                className="option"
                 type="button"
                 data-action={dataAction}
                 onMouseDown={actionManager}

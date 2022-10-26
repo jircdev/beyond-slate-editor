@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Option } from "./option";
-import { SaveButton } from "./save-button";
+import { Option } from "../../../../../../beyond-slate-editor/modules/home/ts/views/components/option";
+import { SaveButton } from "../../../../../../beyond-slate-editor/modules/home/ts/views/components/save-button";
 
 export 
 function HeaderEditor() {
