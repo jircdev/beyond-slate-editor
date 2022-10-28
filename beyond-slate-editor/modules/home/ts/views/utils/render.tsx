@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { Badge } from '../nodes/badge';
 import { CodeBlock } from '../nodes/code';
 import { Image } from '../nodes/image';
 import { Link } from '../nodes/link';
 import { Paragraph } from '../nodes/paragraph';
+import { Title } from '../nodes/title';
 import {Leaf} from "./leaf";
 
 export function onRenderElement(props) {
@@ -17,6 +19,10 @@ export function onRenderElement(props) {
             return <Link {...props}/>
         case 'br':
             return <br />;
+        case 'h1':
+            return <Title {...props} />
+        case 'badge':
+            return <Badge {...props} />
         default:
             return <Paragraph {...props} />
     }

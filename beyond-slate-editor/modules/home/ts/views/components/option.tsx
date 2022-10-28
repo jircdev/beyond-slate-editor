@@ -4,13 +4,17 @@ import { toggleCodeBlock } from '../actions/set-code';
 import { toggleBoldMark } from '../actions/set-bold';
 import { useEditorContext } from '../context';
 import { addImage } from '../actions-manager/load-image';
+import { insertTitle } from '../actions/set-title';
+import { insertBadge } from '../actions/add-badge';
 
 
 const ACTIONS = {
     link: addLink,
     image: addImage,
     bold: toggleBoldMark,
-    code: toggleCodeBlock
+    code: toggleCodeBlock,
+    title: insertTitle,
+    badge: insertBadge
 };
 
 interface Props {
@@ -26,7 +30,7 @@ function Option({ dataAction, name, needAFile }: Props): JSX.Element {
 
     const actionManager = (event) => {
         const { selection } = editor;
-        console.log(1, editor)
+        
         if (!selection) return;
 
         ACTIONS[dataAction](editor, fileRef);

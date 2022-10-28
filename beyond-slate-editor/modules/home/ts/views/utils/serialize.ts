@@ -33,7 +33,7 @@ export const serialize = nodes => {
                 return `<pre><code>${children}</code></pre>`
                 
             default:
-                return children;
+                return `<p>${children}</p>`;
         }
     })
 }

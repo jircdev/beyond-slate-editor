@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { BaseEditor } from 'slate';
+import { BaseEditor, Descendant } from 'slate';
 import { Editable, ReactEditor, Slate } from "slate-react";
 import { useEditorContext } from '../context';
 import { onReanderLeaf, onRenderElement } from '../utils/render';
@@ -19,15 +19,15 @@ export
 function TextEditor(): JSX.Element {
     const { editor, value, setValue } = useEditorContext();
 
-    const onChange = (newValue: string) => {
+    const onChange = (newValue: Descendant[]) => {
+        console.log(2, newValue)
         const isAstChange = editor.operations.some(operation => 'set_selection' !== operation.type);
 
         if (isAstChange) {
-            console.log(value)
             // Save the value to Local Storage.
             //console.log(serialize(value));
             const content = JSON.stringify(value);
-            localStorage.setItem('__content', content);
+            // localStorage.setItem('__content', content);
         }
 
         setValue(newValue);

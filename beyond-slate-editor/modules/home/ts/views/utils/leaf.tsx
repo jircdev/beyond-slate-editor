@@ -16,6 +16,7 @@ export const Leaf = ({attributes, children, leaf}) => {
     if (leaf.underline) {
         children = <u>{children}</u>
     }
+    
     if (leaf.inlineCode) {
         children = <pre>{children}</pre>
     }

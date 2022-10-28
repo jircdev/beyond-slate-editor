@@ -28,6 +28,16 @@ function HeaderEditor() {
                     dataAction="link"
                     name="Link"
                 />
+
+                <Option
+                    dataAction="title"
+                    name="h1"
+                />
+
+                <Option
+                    dataAction="badge"
+                    name="Badge"
+                />
             </div>
 
             <SaveButton />
