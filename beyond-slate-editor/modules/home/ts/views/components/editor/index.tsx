@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { BaseEditor, Descendant } from 'slate';
 import { Editable, ReactEditor, Slate } from "slate-react";
-import { useEditorContext } from '../context';
-import { onReanderLeaf, onRenderElement } from '../utils/render';
+import { useEditorContext } from '../../context';
+import { onReanderLeaf, onRenderElement } from '../../utils/render';
 
 type CustomElement = { type: 'paragraph'; children: [{ text: '' }] };
 type CustomText = { text: string };

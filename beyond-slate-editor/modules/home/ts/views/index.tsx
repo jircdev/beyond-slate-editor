@@ -2,8 +2,8 @@ import * as React from "react";
 import { createEditor } from 'slate';
 import { withReact } from 'slate-react';
 import { EditorContext } from "./context";
-import { TextEditor } from "./components/text-editor";
-import { HeaderEditor } from "./components/header";
+import { TextEditor } from "./components/editor/";
+import { HeaderEditor } from "./components/editor/header";
 import { Descendant } from 'slate';
 import { Results } from "./components/result";
 

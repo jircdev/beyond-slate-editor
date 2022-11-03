@@ -1,23 +1,33 @@
 .results {
-    background: var(--primary);
-    border-radius: 5px;
-    padding: 1rem;
-    max-width: 20rem;
-    min-height: 60vh;
-    max-height: 35rem;
+    header {
+        height: 2rem;
 
-    overflow: auto;
+        h1 {
+            font-size: 1.2rem;
+        }
+    }
 
-    ul {
-        list-style: none;
-        padding: 0;
-        
+    .results-aside {
+        background: var(--primary);
+        border-radius: 5px;
+        padding: 1rem;
+        max-width: 20rem;
+        min-height: 52vh;
+        max-height: 35rem;
 
-        li {
-            overflow: auto;
+        overflow: auto;
 
-            p {
-                word-break: break-all;
+        ul {
+            list-style: none;
+            padding: 0;
+            
+    
+            li {
+                overflow: auto;
+    
+                p {
+                    word-break: break-all;
+                }
             }
         }
     }

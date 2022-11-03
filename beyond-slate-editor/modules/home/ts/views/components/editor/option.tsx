@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { addLink } from '../actions-manager/add-link';
-import { toggleCodeBlock } from '../actions/set-code';
-import { toggleBoldMark } from '../actions/set-bold';
-import { useEditorContext } from '../context';
-import { addImage } from '../actions-manager/load-image';
-import { insertTitle } from '../actions/set-title';
-import { insertBadge } from '../actions/add-badge';
+import { addLink } from '../../actions-manager/add-link';
+import { toggleCodeBlock } from '../../actions/set-code';
+import { toggleBoldMark } from '../../actions/set-bold';
+import { useEditorContext } from '../../context';
+import { addImage } from '../../actions-manager/load-image';
+import { insertTitle } from '../../actions/set-title';
+import { insertBadge } from '../../actions/add-badge';
 
 
 const ACTIONS = {
