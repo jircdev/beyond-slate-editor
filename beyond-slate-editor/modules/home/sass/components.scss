@@ -1,0 +1,36 @@
+p {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin: .2rem;
+    display: block;
+    max-width: 100%;
+}
+
+br {
+    display: block;
+}
+
+a {
+    font-size: 1.2rem;
+}
+
+pre {
+    margin: 0;
+
+    code {
+        background: var(--secondary-light);
+        border-radius: 5px;
+        font-size: .9rem;
+        padding: .2rem;
+    }
+}
+
+img {
+    width: 100%;
+
+}
+
+.badge {
+    background: var(--primary-surface);
+    padding: 1rem;
+}

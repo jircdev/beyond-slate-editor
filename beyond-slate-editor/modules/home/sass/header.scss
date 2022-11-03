@@ -1,0 +1,36 @@
+header {
+    background: var(--secondary-primary);
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .options {
+      button.option {
+        color: var(--text-color);
+
+        font-size: bold;
+        border: 0;
+        
+        padding: .5rem 1rem;
+
+        &:hover {
+          background: var(--accent-color);
+          border-radius: 5px;
+        }
+      }
+
+      .file-input {
+        display: none;
+        opacity: 0;
+      }
+    }
+
+    .save-button {
+      background: var(--accent-color);
+      border-radius: 5px;
+      color: var(--text-color);
+      padding: .5rem 1rem;
+    }
+  }

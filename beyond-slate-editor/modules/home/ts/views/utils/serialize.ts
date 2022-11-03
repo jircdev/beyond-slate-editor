@@ -3,7 +3,6 @@ import {Text} from 'slate'
 
 // TODO: MODIFICAR PARA QUE USE EL FORMATO JSON
 export const serialize = nodes => {
-
     nodes = Array.isArray(nodes) ? nodes : [nodes];
 
     return nodes.map(node => {
@@ -32,6 +31,9 @@ export const serialize = nodes => {
             case 'code':
                 return `<pre><code>${children}</code></pre>`
                 
+            case 'h1': 
+                return `<h1>${children}</h1>`;
+
             default:
                 return `<p>${children}</p>`;
         }

@@ -1,0 +1,15 @@
+.editor-container {
+    height: 100%;
+    min-width: 60%;
+    max-width: 60rem;
+
+    .beyond-editor {
+        background: var(--primary);
+        border-radius: 5px;
+        min-height: 50vh;
+        padding: 1.5rem;
+        max-height: 30rem;
+
+        overflow: auto;
+    }
+}

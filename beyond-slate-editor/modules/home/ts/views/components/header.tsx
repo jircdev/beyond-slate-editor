@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Option } from "./option";
-import { SaveButton } from "./save-button";
 
 export 
 function HeaderEditor() {
@@ -39,8 +38,6 @@ function HeaderEditor() {
                     name="Badge"
                 />
             </div>
-
-            <SaveButton />
         </header>
     );
 }

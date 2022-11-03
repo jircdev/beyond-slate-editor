@@ -1,0 +1,24 @@
+.results {
+    background: var(--primary);
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 20rem;
+    min-height: 60vh;
+    max-height: 35rem;
+
+    overflow: auto;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        
+
+        li {
+            overflow: auto;
+
+            p {
+                word-break: break-all;
+            }
+        }
+    }
+}

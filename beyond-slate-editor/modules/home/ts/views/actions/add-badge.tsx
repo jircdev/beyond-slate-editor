@@ -16,18 +16,7 @@ export function insertBadge(editor) {
     
     const theresOnlyOneChild = startPoint === lastPoint; 
     let selectedChildren = [];
-
-    if (theresOnlyOneChild) selectedChildren.push(editor.children[startPoint]);
-
-    console.log(startPoint, lastPoint)
-
-    for (let selectedNode = startPoint; selectedNode < lastPoint; selectedNode++) {
-        console.log(0.1, selectedNode)
-        console.log(0.2, editor.children[selectedNode])
-        selectedChildren.push(editor.children[selectedNode]);
-    }
-
-    console.log(1, selectedChildren)
+    console.log(startPoint, lastPoint);
 
     const theresNoChildrensSelected = selection === null && selection.anchor === null;
     if (theresNoChildrensSelected) return;
