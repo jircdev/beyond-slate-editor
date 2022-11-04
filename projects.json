@@ -1,8 +1,5 @@
 [
-  "/beyond-slate-editor/project.json",
-  "../../../beyond/@beyond-js/kernel/project.json",
-  "../../../beyond/@beyond-js/widgets/project.json",
-  "../../../beyond/@beyond-js/react-widgets/react-18/project.json",
-  "../../../beyond/@beyond-js/backend/project.json",
-  "../../../beyond/@beyond-js/ssr/project.json"
+  "/project/project.json",
+  "/test-project/project.json"
+  
 ]

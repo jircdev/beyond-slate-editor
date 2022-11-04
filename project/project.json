@@ -1,5 +1,4 @@
 {
-  "version": 1,
   "scope": "community",
   "name": "beyond-slate-editor",
   "title": "Beyond Slate Editor",
@@ -12,19 +11,18 @@
       "es"
     ]
   },
-  "params": {},
   "modules": {
-    "path": "./modules",
-    "externals": {}
+    "path": "modules"
   },
   "deployment": {
     "distributions": [
       {
         "name": "web",
-        "platform": "web",
         "environment": "development",
-        "port": 3001,
-        "default": true
+        "platform": "web",
+        "ports": {
+          "bundles": "3001"
+        }
       }
     ]
   }
